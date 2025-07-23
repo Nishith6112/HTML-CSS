@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #000;
+}
+
+header {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 50px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+  user-select: none;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  color: #6c63ff;
+}
+
+.btn-estimate {
+  background-color: #1288d7;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("/images/Hybrid-Mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 80px;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.subheading {
+  color: #1288d7;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 20px 0;
+  word-wrap: break-word;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contactnow {
+  display: inline-block;
+  background-color: #1288d7;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1068px) {
+  .hero {
+    padding: 40px 40px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 10px 20px;
+    color: black;
+    width: 100%;
+  }
+
+  .btn-estimate {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 30px 20px;
+    text-align: center;
+    background-attachment: scroll;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .contactnow {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 40px;
+  }
+
+  .btn-estimate {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .subheading {
+    font-size: 14px;
+  }
+
+  .contactnow {
+    font-size: 13px;
+  }
+}
