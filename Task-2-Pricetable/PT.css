@@ -1,0 +1,144 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #497fec, #9f4fcd);
+  background-image: url(/images/nature.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #2b2b2b;
+  padding: 60px 20px;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 60px;
+}
+
+/* Container */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Pricing Card */
+.pricing-card {
+  background: transparent;
+  width: 300px;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: #040404;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #111010;
+}
+
+.price {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #161618;
+  margin: 16px 0;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #080808;
+}
+
+.features {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.features li {
+  font-size: 1rem;
+  margin: 12px 0;
+  position: relative;
+  color: #010101;
+}
+
+.features li::before {
+  content: "✔";
+  color: #080808;
+  margin-right: 10px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background: #030303;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #020203;
+}
+
+/* Featured Plan - same as others */
+.featured {
+  background: transparent;
+  border: 2px solid transparent;
+  z-index: 1;
+}
+
+.featured h3 {
+  color: #0b0b0b;
+}
+
+.featured .price {
+  color: #0c0c0e;
+}
+
+.featured .btn {
+  background: #050505;
+}
+
+.featured .btn:hover {
+  background: #020202;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}

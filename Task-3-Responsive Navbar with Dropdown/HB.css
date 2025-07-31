@@ -1,0 +1,140 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  position: relative;
+ 
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+ 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  display: block;
+}
+
+.nav-links li a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown-content li a {
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hamburger Menu */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    display: none;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: static;
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.menu-item {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #444;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
