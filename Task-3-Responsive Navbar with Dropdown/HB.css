@@ -112,7 +112,7 @@ body {
 .hero {
   padding: 2rem;
   text-align: center;
-  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  background: linear-gradient(to right, #f5f7fa, #83a5db);
 }
 
 .hero h1 {
